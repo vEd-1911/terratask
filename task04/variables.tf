@@ -125,8 +125,20 @@ variable "tags" {
   }
 }
 
+variable "admin_username" {
+  description = "Admin username for the virtual machine"
+  type        = string
+  default     = "azureuser"
+}
+
 variable "vm_password" {
   description = "Password for the virtual machine admin user"
   type        = string
   sensitive   = true
+}
+
+variable "ip_configuration_name" {
+  description = "Name of the IP configuration for the network interface"
+  type        = string
+  default     = "ipconfig1"
 }

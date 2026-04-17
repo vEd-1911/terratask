@@ -82,7 +82,7 @@ resource "azurerm_network_interface" "nic" {
   resource_group_name = azurerm_resource_group.rg.name
 
   ip_configuration {
-    name                          = "ipconfig1"
+    name                          = var.ip_configuration_name
     subnet_id                     = azurerm_subnet.subnet.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.pip-1.id
@@ -103,7 +103,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = var.location
   size                = var.virtual_machine_sku
-  admin_username      = "azureuser"
+  admin_username      = var.admin_username
   admin_password      = var.vm_password
 
   disable_password_authentication = false
@@ -134,7 +134,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     connection {
       type     = "ssh"
       host     = azurerm_public_ip.pip-1.ip_address
-      user     = "azureuser"
+      user     = var.admin_username
       password = var.vm_password
     }
   }
