@@ -27,7 +27,8 @@ resource "azurerm_public_ip" "pip-1" {
   name                = var.public_ip_name
   location            = var.location
   resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "Standard"
   domain_name_label   = var.dns_name_label
 
   tags = var.tags
