@@ -70,7 +70,7 @@ ip_restrictions = [{
     name       = "Deny all"
     priority   = 2147483647
     action     = "Deny"
-    ip_address = "0.0.0.0"
+    ip_address = "0.0.0.0/0"
   }
 ]
 
@@ -80,6 +80,6 @@ traffic_manager = {
   resource_group_key     = "RG3"
   traffic_routing_method = "Performance"
   tm_ttl_dns_config      = 30
-  tm_relative_dns_name   = "tm1"
+  tm_relative_dns_name   = "cmaz-oer4x906-mod5-trafdnsname"
 
 }
