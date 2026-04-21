@@ -1,4 +1,1 @@
-task03/.terraform/
-task03/.terraform.lock.hcl
-task04/.terraform/
-task04/.terraform.lock.hcl
+*/.terraform*
