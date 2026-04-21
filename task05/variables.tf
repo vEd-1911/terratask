@@ -28,13 +28,13 @@ variable "app_service" {
 
 variable "traffic_manager" {
   description = "Name of the traffic manager"
-  type = map(object({
+  type = object({
     tm_name                = string
     resource_group_key     = string
     traffic_routing_method = string
     tm_ttl_dns_config      = number
     tm_relative_dns_name   = string
-  }))
+  })
 }
 
 variable "tags" {

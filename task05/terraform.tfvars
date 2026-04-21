@@ -74,11 +74,11 @@ ip_restrictions = [{
 ]
 
 traffic_manager = {
-  "tm1" = {
-    tm_name                = "cmaz-oer4x906-mod5-traf"
-    resource_group_key     = "RG3"
-    traffic_routing_method = "Performance"
-    tm_ttl_dns_config      = 30
-    tm_relative_dns_name   = "tm1"
-  }
+
+  tm_name                = "cmaz-oer4x906-mod5-traf"
+  resource_group_key     = "RG3"
+  traffic_routing_method = "Performance"
+  tm_ttl_dns_config      = 30
+  tm_relative_dns_name   = "tm1"
+
 }

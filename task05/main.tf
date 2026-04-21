@@ -34,12 +34,11 @@ module "APP" {
 module "TM" {
   source = "./modules/traffic_manager"
 
-  for_each               = var.traffic_manager
-  resource_group_name    = module.RG[each.value.resource_group_key].name
-  traffic_routing_method = each.value.traffic_routing_method
-  tm_name                = each.value.tm_name
-  tm_ttl_dns_config      = each.value.tm_ttl_dns_config
-  tm_relative_dns_name   = each.value.tm_relative_dns_name
+  resource_group_name    = module.RG[var.traffic_manager.resource_group_key].name
+  traffic_routing_method = var.traffic_manager.traffic_routing_method
+  tm_name                = var.traffic_manager.tm_name
+  tm_ttl_dns_config      = var.traffic_manager.tm_ttl_dns_config
+  tm_relative_dns_name   = var.traffic_manager.tm_relative_dns_name
 
   tm_endpoints = {
     for app_key, app in module.APP :
