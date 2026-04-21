@@ -56,7 +56,7 @@ ip_restrictions = [{
   name       = "allow-ip"
   priority   = 100
   action     = "Allow"
-  ip_address = "18.153.146.156"
+  ip_address = "18.153.146.156/32"
 
 
   },
