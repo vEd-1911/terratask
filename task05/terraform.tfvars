@@ -67,9 +67,10 @@ ip_restrictions = [{
     service_tag = "AzureTrafficManager"
   },
   {
-    name     = "deny-all"
-    priority = 2147483647
-    action   = "Deny"
+    name       = "Deny all"
+    priority   = 2147483647
+    action     = "Deny"
+    ip_address = "0.0.0.0"
   }
 ]
 
