@@ -31,7 +31,7 @@ tags = {
   Creator = "vedant_awasthi@epam.com"
 }
 
-repo_url = "https://github.com/m-vp/Terraform-Task#main:task08/application"
+repo_url = "https://github.com/vEd-1911/terratask/tree/main/task08/application"
 
 aci_ip_type = "Public"
 aci_os_type = "Linux"
